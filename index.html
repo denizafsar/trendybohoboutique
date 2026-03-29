@@ -503,18 +503,33 @@
       }
 
       .map-wrap {
-        border-radius: 12px;
-        overflow: hidden;
-        max-width: 500px;
+        max-width: 360px;
         margin: 0 auto;
-        box-shadow: 0 12px 48px rgba(44, 26, 14, 0.3);
       }
 
-      .map-wrap iframe {
+      .map-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
         width: 100%;
-        height: 240px;
-        border: none;
-        display: block;
+        background: rgba(250, 246, 239, 0.15);
+        border: 1.5px solid rgba(250, 246, 239, 0.35);
+        color: var(--color-cream);
+        font-family: var(--font-body);
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        padding: 0 32px;
+        height: 56px;
+        border-radius: 50px;
+        transition: background 0.2s ease, transform 0.15s ease;
+        text-decoration: none;
+      }
+
+      .map-btn:active {
+        background: rgba(250, 246, 239, 0.25);
+        transform: scale(0.97);
       }
 
       /* ─────────────────────────────────────────
@@ -791,12 +806,18 @@
       </div>
 
       <div class="map-wrap reveal">
-        <iframe
-          src="https://maps.google.com/maps?q=Carrer+Jes%C3%BAs+29+Sitges+08870+Barcelona&output=embed"
-          title="Trendy Boho Boutique — Carrer Jesús 29, Sitges"
-          loading="lazy"
-          allowfullscreen
-        ></iframe>
+        <a
+          href="https://maps.google.com/?cid=788432088322390803"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="map-btn"
+          data-i18n="directions-btn"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+          </svg>
+          Get Directions
+        </a>
       </div>
     </section>
 
@@ -855,6 +876,7 @@
           "rating-label": "Google Rating",
           "rating-val":
             '5.0 · Perfect Rating<br><small style="font-size:14px;opacity:0.7;">on Google Maps</small>',
+          "directions-btn": "Get Directions",
           "ig-eyebrow": "Stay connected",
           "ig-headline": "Follow our<br>journey",
           "ig-btn": "Open Instagram →",
@@ -879,6 +901,7 @@
           "rating-label": "Valoración Google",
           "rating-val":
             '5.0 · Puntuación perfecta<br><small style="font-size:14px;opacity:0.7;">en Google Maps</small>',
+          "directions-btn": "Cómo llegar",
           "ig-eyebrow": "Síguenos",
           "ig-headline": "Sigue nuestro<br>viaje",
           "ig-btn": "Abrir Instagram →",
@@ -904,6 +927,7 @@
           "rating-label": "Valoració Google",
           "rating-val":
             '5.0 · Puntuació perfecta<br><small style="font-size:14px;opacity:0.7;">a Google Maps</small>',
+          "directions-btn": "Com arribar-hi",
           "ig-eyebrow": "Segueix-nos",
           "ig-headline": "Segueix el nostre<br>viatge",
           "ig-btn": "Obrir Instagram →",
