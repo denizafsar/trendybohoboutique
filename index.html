@@ -8,6 +8,11 @@
       content="Trendy Boho Boutique — Handpicked Mediterranean fashion for the free-spirited woman. Located in Sitges, Spain."
     />
     <title>Trendy Boho Boutique · Sitges</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100' height='100' rx='22' fill='%23F5EFE0'/%3E%3Cpath d='M50 18 C50 18 72 30 72 52 C72 66 62 76 50 80 C38 76 28 66 28 52 C28 30 50 18 50 18Z' fill='%23C4714A'/%3E%3Cline x1='50' y1='22' x2='50' y2='78' stroke='%23F5EFE0' stroke-width='1.8' stroke-linecap='round'/%3E%3Cline x1='50' y1='36' x2='40' y2='46' stroke='%23F5EFE0' stroke-width='1.2' stroke-linecap='round' opacity='.7'/%3E%3Cline x1='50' y1='36' x2='60' y2='46' stroke='%23F5EFE0' stroke-width='1.2' stroke-linecap='round' opacity='.7'/%3E%3Cline x1='50' y1='50' x2='38' y2='60' stroke='%23F5EFE0' stroke-width='1.2' stroke-linecap='round' opacity='.7'/%3E%3Cline x1='50' y1='50' x2='62' y2='60' stroke='%23F5EFE0' stroke-width='1.2' stroke-linecap='round' opacity='.7'/%3E%3C/svg%3E"
+    />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -204,8 +209,12 @@
       }
 
       @keyframes kenburns {
-        from { transform: scale(1.00); }
-        to   { transform: scale(1.08); }
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.08);
+        }
       }
 
       .hero-overlay {
@@ -245,7 +254,9 @@
         line-height: 1.08;
         color: #faf6ef;
         margin-bottom: 20px;
-        text-shadow: 0 2px 20px rgba(44, 26, 14, 0.8), 0 1px 4px rgba(0,0,0,0.5);
+        text-shadow:
+          0 2px 20px rgba(44, 26, 14, 0.8),
+          0 1px 4px rgba(0, 0, 0, 0.5);
       }
 
       .hero-tagline {
@@ -404,6 +415,7 @@
         column-gap: 12px;
         max-width: 800px;
         margin: 0 auto;
+        width: 100%;
       }
 
       .g-item {
@@ -411,6 +423,12 @@
         margin-bottom: 12px;
         border-radius: var(--radius);
         overflow: hidden;
+      }
+      .g-item:nth-child(odd) img {
+        aspect-ratio: 3/4;
+      }
+      .g-item:nth-child(even) img {
+        aspect-ratio: 4/5;
       }
 
       /* Gallery items: fade only — no translateY to avoid masonry reflow jumps */
@@ -523,7 +541,9 @@
         padding: 0 32px;
         height: 56px;
         border-radius: 50px;
-        transition: background 0.2s ease, transform 0.15s ease;
+        transition:
+          background 0.2s ease,
+          transform 0.15s ease;
         text-decoration: none;
       }
 
@@ -662,7 +682,7 @@
 
       @media (min-width: 1024px) {
         .gallery-grid {
-          columns: 3;
+          grid-template-columns: 1fr 1fr 1fr;
         }
       }
     </style>
@@ -813,7 +833,16 @@
           class="map-btn"
           data-i18n="directions-btn"
         >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
             <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
           </svg>
           Get Directions
@@ -1004,3 +1033,4 @@
     </script>
   </body>
 </html>
+
